@@ -8,11 +8,11 @@
 
     <Button
         android:id="@+id/Confirm"
-        android:layout_width="108dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="151dp"
-        android:layout_marginBottom="182dp"
-        android:text="Confirm"
+        android:layout_width="159dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginBottom="192dp"
+        android:text="@string/Confirm"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -20,29 +20,29 @@
         android:layout_width="67dp"
         android:layout_height="125dp"
         android:layout_marginStart="172dp"
-        android:layout_marginTop="88dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Question">
+        android:layout_marginBottom="268dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <RadioButton
             android:id="@+id/Yes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Да" />
+            android:text="@string/Yes" />
 
         <RadioButton
             android:id="@+id/No"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Нет" />
+            android:text="@string/No" />
     </RadioGroup>
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/Question"
         android:layout_width="294dp"
         android:layout_height="48dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="212dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="216dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
@@ -51,11 +51,11 @@
         android:id="@+id/result"
         android:layout_width="271dp"
         android:layout_height="113dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="72dp"
         android:fontFamily="casual"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/Question"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
