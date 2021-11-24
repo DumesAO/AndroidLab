@@ -5,57 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
-    <Button
-        android:id="@+id/Confirm"
-        android:layout_width="159dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="124dp"
-        android:layout_marginBottom="192dp"
-        android:text="@string/Confirm"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <RadioGroup
-        android:layout_width="67dp"
-        android:layout_height="125dp"
-        android:layout_marginStart="172dp"
-        android:layout_marginBottom="268dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <RadioButton
-            android:id="@+id/Yes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Yes" />
-
-        <RadioButton
-            android:id="@+id/No"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/No" />
-    </RadioGroup>
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/Question"
-        android:layout_width="294dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="216dp"
-        app:layout_constraintStart_toStartOf="parent"
+    <FrameLayout
+        android:id="@+id/fragment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
-
-    <TextView
-        android:id="@+id/result"
-        android:layout_width="271dp"
-        android:layout_height="113dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="72dp"
-        android:fontFamily="casual"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
