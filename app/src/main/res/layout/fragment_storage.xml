@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".StorageActivity">
 
     <TextView
-        android:id="@+id/result"
-        android:layout_width="271dp"
-        android:layout_height="113dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="72dp"
-        android:fontFamily="casual"
-        android:textSize="14sp"
+        android:id="@+id/storage_data"
+        android:layout_width="365dp"
+        android:layout_height="655dp"
+        android:text="Textview"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.example.Lab1
+package com.example.androidLab
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
