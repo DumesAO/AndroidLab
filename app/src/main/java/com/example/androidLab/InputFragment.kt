@@ -1,6 +1,7 @@
 package com.example.androidLab
 
 import android.content.Context
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import com.google.android.material.textfield.TextInputEditText
+import com.tapadoo.alerter.Alerter
 import java.lang.ClassCastException
 
 class InputFragment : Fragment() {
@@ -51,6 +53,10 @@ class InputFragment : Fragment() {
         val yb: RadioButton = view?.findViewById(R.id.Yes) as RadioButton
         val nb: RadioButton = view?.findViewById(R.id.No) as RadioButton
         var answer = ""
+        val alerter=Alerter.create(this.requireActivity())
+            .setTitle("Ошибка")
+            .setDuration(3000)
+            .setBackgroundColorInt(Color.BLACK)
         confirm.setOnClickListener {
             val questionText = question.text.toString();
             if (yb.isChecked) {
@@ -58,7 +64,15 @@ class InputFragment : Fragment() {
             } else if (nb.isChecked) {
                 answer = "Нет"
             }
-            passData(questionText, answer)
+            if(questionText==""){
+                alerter.setText("Ввведите вопрос").show()
+            } else{
+            if (answer==""){
+                alerter.setText("Выберите ответ").show()
+            } else{
+                passData(questionText, answer)
+            }}
+
         }
         storage.setOnClickListener {
             showStorage()

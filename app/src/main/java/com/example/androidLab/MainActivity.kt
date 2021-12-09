@@ -19,25 +19,11 @@ class MainActivity : AppCompatActivity(), InputFragment.OnTextSent, InputFragmen
     override fun sendData(questionText: String, answer: String) {
         val resultFragment = ResultFragment()
         val bundle = Bundle()
-        val alerter = Alerter.create(this)
-            .setTitle("Ошибка")
-            .setDuration(3000)
-            .setBackgroundColorInt(Color.BLACK)
-        if (questionText.isNotEmpty()) {
-            if (answer != "") {
-                bundle.putString("questionText", questionText)
-                bundle.putString("answer", answer)
-                resultFragment.arguments = bundle
-                supportFragmentManager.beginTransaction()
-                    .replace(R.id.fragment_layout, resultFragment).addToBackStack(null).commit()
-            } else {
-                alerter.setText("Выберите ответ").show()
-
-            }
-        } else {
-            alerter.setText("Выберите вопрос").show()
-
-        }
+        bundle.putString("questionText", questionText)
+        bundle.putString("answer", answer)
+        resultFragment.arguments = bundle
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_layout, resultFragment).addToBackStack(null).commit()
     }
 
     override fun show() {

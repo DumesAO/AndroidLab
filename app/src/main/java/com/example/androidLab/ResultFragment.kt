@@ -24,7 +24,6 @@ class ResultFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-
         val questionText = arguments?.getString("questionText") as String
         val answer = arguments?.getString("answer") as String
         val result = "Вопрос: $questionText  Ответ: $answer"
