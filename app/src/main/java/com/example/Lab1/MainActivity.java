@@ -28,10 +28,6 @@ public class MainActivity extends AppCompatActivity {
         Uri uri=Uri.parse( "android.resource://" + getPackageName() + "/" + currentPlaying);
         player.setVideoURI(uri);
 
-        MediaController mediaController = new MediaController(this);
-        player.setMediaController(mediaController);
-
-        mediaController.setMediaPlayer(player);
 
 
         playBtn = findViewById(R.id.playBtn);
