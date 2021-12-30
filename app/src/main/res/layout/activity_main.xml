@@ -7,55 +7,56 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/Confirm"
-        android:layout_width="108dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="151dp"
-        android:layout_marginBottom="182dp"
-        android:text="Confirm"
+        android:id="@+id/playBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/play"
+        android:onClick="play"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/pauseBtn" />
 
-    <RadioGroup
-        android:layout_width="67dp"
-        android:layout_height="125dp"
-        android:layout_marginStart="172dp"
-        android:layout_marginTop="88dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Question">
+    <Button
+        android:id="@+id/pauseBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/pause"
+        android:onClick="pause"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/playBtn"
+        app:layout_constraintRight_toLeftOf="@id/stopBtn" />
 
-        <RadioButton
-            android:id="@+id/Yes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Да" />
+    <Button
+        android:id="@+id/stopBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/stop"
+        android:onClick="stop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/pauseBtn"
+        app:layout_constraintRight_toRightOf="parent" />
 
-        <RadioButton
-            android:id="@+id/No"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Нет" />
-    </RadioGroup>
+    <VideoView
+        android:id="@+id/player"
+        android:layout_width="0dp"
+        android:layout_height="650dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/pauseBtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/Question"
-        android:layout_width="294dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="212dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
-
-    <TextView
-        android:id="@+id/result"
-        android:layout_width="271dp"
-        android:layout_height="113dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginBottom="32dp"
-        android:fontFamily="casual"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/Question"
-        app:layout_constraintStart_toStartOf="parent" />
+    <Button
+        android:id="@+id/changeBtn"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:onClick="change"
+        android:text="Change"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pauseBtn"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
